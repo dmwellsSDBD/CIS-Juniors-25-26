@@ -78,6 +78,16 @@
 <h1 style="text-align: center; font-size: 48px; margin-top: 100px;">CSS Responsive Card Design</h1>
 <p style="text-align: center; font-size: 28px; color: #7f8c8d; margin-top: 50px;">Building Mobile-First Layouts with CSS Grid</p>
 <p style="text-align: center; font-size: 20px; margin-top: 80px;">11th Grade Computer Science</p>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Welcome students and take attendance</li>
+<li>Briefly preview today's objectives: learning responsive design, building a 6-card grid project</li>
+<li>Explain that they'll be building something used on EVERY major website</li>
+<li>Time: 2 minutes</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 2: Learning Objectives -->
@@ -92,7 +102,15 @@
 <li>Build a fully responsive 6-card grid that works on all devices</li>
 </ul>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Read through objectives with emphasis on highlighted terms</li>
+<li>Ask: "Who has heard of responsive design before?"</li>
+<li>Mention that these skills are essential for ANY web developer job</li>
+<li>Time: 2 minutes</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 3: Hook - Card Designs Are Everywhere -->
@@ -112,7 +130,15 @@
 Why are cards so popular? They organize information into digestible, scannable chunks that work on ANY screen size!
 </div>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Show actual screenshots from these sites if possible (have them ready)</li>
+<li>Ask students to name other sites with card layouts</li>
+<li>Emphasize: "This is THE most common design pattern in modern web design"</li>
+<li>Time: 3 minutes</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 4: The Challenge of Responsive Design -->
@@ -132,6 +158,15 @@ Why are cards so popular? They organize information into digestible, scannable c
 Over 60% of web traffic comes from mobile devices! If your site doesn't work on mobile, you're losing more than half your audience.
 </div>
 
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Ask: "What device do YOU use most for browsing websites?"</li>
+<li>Discuss the mobile-first world we live in</li>
+<li>Share the statistic about mobile traffic</li>
+<li>Time: 3 minutes</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 5: What is Mobile-First Design? -->
@@ -156,7 +191,15 @@ Over 60% of web traffic comes from mobile devices! If your site doesn't work on 
 <li>✅ Most users are on mobile anyway!</li>
 </ul>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Draw or show diagram: phone → tablet → desktop</li>
+<li>Emphasize: "We write CSS for mobile FIRST, no media query needed"</li>
+<li>Explain: "Then we use media queries to add complexity for larger screens"</li>
+<li>Time: 4 minutes</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 6: Media Queries Explained -->
@@ -186,7 +229,15 @@ Over 60% of web traffic comes from mobile devices! If your site doesn't work on 
 }
 </div>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Walk through syntax: @media (condition) { styles }</li>
+<li>Emphasize: min-width means "at least this wide"</li>
+<li>Point out: mobile needs NO media query - it's the default!</li>
+<li>Time: 4 minutes</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 7: Common Breakpoints -->
@@ -228,7 +279,15 @@ Over 60% of web traffic comes from mobile devices! If your site doesn't work on 
 These aren't rules - they're guidelines! Choose breakpoints based on YOUR content.
 </div>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Explain why 768px (iPad portrait width)</li>
+<li>Explain why 1024px (iPad landscape, small laptops)</li>
+<li>Today we'll use 768px and 1024px for our project</li>
+<li>Time: 3 minutes</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 8: CSS Grid Basics -->
@@ -256,7 +315,15 @@ These aren't rules - they're guidelines! Choose breakpoints based on YOUR conten
 <br>1fr 1fr 1fr = three equal columns
 </div>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Review: "Who remembers what display: grid does?"</li>
+<li>Explain fr unit: "Imagine cutting a pizza into equal slices"</li>
+<li>Show that gap replaces manual margin calculations</li>
+<li>Time: 4 minutes</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 9: Demo Time! -->
@@ -284,7 +351,16 @@ These aren't rules - they're guidelines! Choose breakpoints based on YOUR conten
 }
 </div>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>STOP and have students code along</li>
+<li>Create the HTML first, verify it displays</li>
+<li>Add CSS piece by piece</li>
+<li>Explain each property as you add it</li>
+<li>Time: 8 minutes for full code-along</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 10: Making Images Responsive -->
@@ -313,7 +389,15 @@ These aren't rules - they're guidelines! Choose breakpoints based on YOUR conten
 </ul>
 </div>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Demonstrate what happens WITHOUT object-fit (distortion)</li>
+<li>Show the difference between cover, contain, and fill</li>
+<li>Explain why we need both width: 100% AND fixed height</li>
+<li>Time: 4 minutes</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 11: Adding Hover Effects -->
@@ -340,7 +424,16 @@ These aren't rules - they're guidelines! Choose breakpoints based on YOUR conten
 The transition property goes on the BASE element (.card), NOT on the hover state!
 </div>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Demonstrate the hover effect live in browser</li>
+<li>Explain transform: translateY(-8px) means move UP 8 pixels</li>
+<li>Show what happens without transition (instant, jarring)</li>
+<li>Common mistake: putting transition on :hover instead of base element</li>
+<li>Time: 4 minutes</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 12: Building the Grid Container -->
@@ -367,7 +460,15 @@ The transition property goes on the BASE element (.card), NOT on the hover state
 </ul>
 </div>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Code this along with students</li>
+<li>Have them wrap all 6 cards in a div with class="card-container"</li>
+<li>Test in browser - should see 1 column of cards</li>
+<li>Time: 5 minutes</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 13: Adding Tablet Layout -->
@@ -393,7 +494,16 @@ The transition property goes on the BASE element (.card), NOT on the hover state
 Remember: Tablet inherits ALL mobile styles, then adds or overrides!
 </div>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Add this code together</li>
+<li>Test immediately - use DevTools to resize browser</li>
+<li>Show that below 768px = 1 column, above = 2 columns</li>
+<li>Point out we're ONLY changing what needs to change</li>
+<li>Time: 5 minutes</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 14: Adding Desktop Layout -->
@@ -421,7 +531,16 @@ Mobile → Tablet → Desktop<br>
 Each level builds on the previous one!
 </div>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Add this final media query together</li>
+<li>Test at all three breakpoints</li>
+<li>Slowly resize browser to show smooth transitions</li>
+<li>Explain: each breakpoint only changes what needs to change</li>
+<li>Time: 5 minutes</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 15: Testing Responsive Design -->
@@ -452,7 +571,15 @@ Watch the layout change at your breakpoints: 768px and 1024px
 </ul>
 </div>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Demonstrate DevTools device mode</li>
+<li>Show how to select iPhone, iPad, etc.</li>
+<li>Slowly drag resize to show breakpoint transitions</li>
+<li>Time: 3 minutes</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 16: Independent Practice Time -->
@@ -474,7 +601,17 @@ Watch the layout change at your breakpoints: 768px and 1024px
 You have 20 minutes! Refer to your student instructions handout for detailed steps.
 </div>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Set a timer for 20 minutes</li>
+<li>Circulate to help students</li>
+<li>Check progress at 10 minutes (should have HTML done and mobile CSS started)</li>
+<li>Check again at 15 minutes (should have at least one media query working)</li>
+<li>Common issues: forgetting viewport meta tag, using max-width instead of min-width</li>
+<li>Time: 20 minutes</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 17: Common Mistakes to Avoid -->
@@ -503,7 +640,14 @@ img { width: 400px; } /* Breaks on small screens! */
 <strong>Fix:</strong> Use width: 100% and object-fit: cover
 </div>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Reference this slide when helping struggling students</li>
+<li>Post common issues you see on board</li>
+<li>Time: Built into practice time, reference as needed</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 18: Gallery Walk -->
@@ -525,7 +669,16 @@ img { width: 400px; } /* Breaks on small screens! */
 Look for creative themes, smooth hover effects, and layouts that work at all three breakpoints!
 </div>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Have students leave their computers open</li>
+<li>Set 5-minute timer</li>
+<li>Encourage positive feedback</li>
+<li>You circulate too - take note of exemplary work</li>
+<li>Time: 5 minutes</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 19: Class Discussion -->
@@ -544,7 +697,16 @@ Look for creative themes, smooth hover effects, and layouts that work at all thr
 </ul>
 </div>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Call on 3-4 students to share</li>
+<li>Acknowledge common challenges</li>
+<li>Reinforce key concepts: mobile-first, media queries, CSS Grid</li>
+<li>Preview next lesson (mention we'll build on these skills)</li>
+<li>Time: 3 minutes</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 20: Key Takeaways -->
@@ -572,7 +734,15 @@ display: grid with grid-template-columns and gap makes responsive layouts simple
 Each breakpoint builds on previous styles - only change what needs changing
 </div>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Emphasize these are professional, real-world skills</li>
+<li>Mention that card layouts are used everywhere</li>
+<li>Remind them to refer to solution files for reference</li>
+<li>Time: 2 minutes</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 21: Exit Ticket -->
@@ -596,7 +766,17 @@ Each breakpoint builds on previous styles - only change what needs changing
 This should take 3-5 minutes. Submit before you leave class!
 </div>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Distribute exit ticket (digital or paper)</li>
+<li>Set 5-minute timer</li>
+<li>Collect as students finish</li>
+<li>Thank students for their effort</li>
+<li>Remind about homework if any</li>
+<li>Time: 5 minutes</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 22: Homework & Next Steps -->
@@ -619,7 +799,15 @@ This should take 3-5 minutes. Submit before you leave class!
 <li>🌟 Research and try CSS Grid's auto-fit/auto-fill properties</li>
 </ul>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Write due date on board</li>
+<li>Clarify submission process</li>
+<li>Answer any final questions</li>
+<li>Time: 2 minutes</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 23: Resources & Help -->
@@ -644,7 +832,15 @@ This should take 3-5 minutes. Submit before you leave class!
 Questions? Check the solution files or ask for help!
 </div>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Remind students solution files are available</li>
+<li>Office hours or help session information</li>
+<li>Preview next lesson topic</li>
+<li>Time: 1 minute</li>
+</ul>
+</div>
 </div>
 
 <!-- Slide 24: Thank You -->
@@ -652,7 +848,14 @@ Questions? Check the solution files or ask for help!
 <h1 style="text-align: center; font-size: 48px; margin-top: 150px;">Great Work Today!</h1>
 <p style="text-align: center; font-size: 28px; color: #7f8c8d; margin-top: 50px;">See you next class!</p>
 
-
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Thank students for their participation</li>
+<li>Compliment specific good work you saw</li>
+<li>Dismiss class</li>
+</ul>
+</div>
 </div>
 
 </body>
