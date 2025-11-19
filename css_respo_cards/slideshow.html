@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS Responsive Card Design</title>
+<style>
+.slide {
+    page-break-after: always;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+}
+.slide h1 {
+    color: #2c3e50;
+    font-size: 36px;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #3498db;
+    padding-bottom: 10px;
+}
+.slide h2 {
+    color: #34495e;
+    font-size: 28px;
+    margin: 30px 0 15px 0;
+}
+.slide h3 {
+    color: #7f8c8d;
+    font-size: 22px;
+    margin: 20px 0 10px 0;
+}
+.slide ul {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-left: 30px;
+}
+.slide li {
+    margin-bottom: 10px;
+}
+.code-block {
+    background: #f4f4f4;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    margin: 15px 0;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+}
+.presenter-notes {
+    background: #fff9e6;
+    border: 2px solid #f1c40f;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 14px;
+}
+.presenter-notes strong {
+    color: #e67e22;
+}
+.example-box {
+    background: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+.highlight {
+    background: #ffeb3b;
+    padding: 2px 5px;
+}
+.key-point {
+    background: #e8f5e9;
+    border-left: 4px solid #4caf50;
+    padding: 15px;
+    margin: 15px 0;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<!-- Slide 1: Title Slide -->
+<div class="slide">
+<h1 style="text-align: center; font-size: 48px; margin-top: 100px;">CSS Responsive Card Design</h1>
+<p style="text-align: center; font-size: 28px; color: #7f8c8d; margin-top: 50px;">Building Mobile-First Layouts with CSS Grid</p>
+<p style="text-align: center; font-size: 20px; margin-top: 80px;">11th Grade Computer Science</p>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Welcome students and take attendance</li>
+<li>Briefly preview today's objectives: learning responsive design, building a 6-card grid project</li>
+<li>Explain that they'll be building something used on EVERY major website</li>
+<li>Time: 2 minutes</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 2: Learning Objectives -->
+<div class="slide">
+<h1>Learning Objectives</h1>
+<p style="font-size: 22px; margin: 30px 0;">By the end of this lesson, you will be able to:</p>
+<ul style="font-size: 22px;">
+<li>Explain the <span class="highlight">mobile-first design approach</span> and its benefits</li>
+<li>Create <span class="highlight">responsive card layouts</span> using CSS Grid</li>
+<li>Implement <span class="highlight">media queries</span> to adjust layouts for different screen sizes</li>
+<li>Apply CSS techniques for professional card components</li>
+<li>Build a fully responsive 6-card grid that works on all devices</li>
+</ul>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Read through objectives with emphasis on highlighted terms</li>
+<li>Ask: "Who has heard of responsive design before?"</li>
+<li>Mention that these skills are essential for ANY web developer job</li>
+<li>Time: 2 minutes</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 3: Hook - Card Designs Are Everywhere -->
+<div class="slide">
+<h1>Card Designs Are Everywhere!</h1>
+<h2>Where have you seen card layouts?</h2>
+<ul style="font-size: 24px;">
+<li><strong>Netflix</strong> - Movie and show thumbnails</li>
+<li><strong>Pinterest</strong> - Pin layouts</li>
+<li><strong>Amazon</strong> - Product listings</li>
+<li><strong>News Sites</strong> - Article previews</li>
+<li><strong>Social Media</strong> - Posts and stories</li>
+<li><strong>App Stores</strong> - App cards</li>
+</ul>
+
+<div class="key-point">
+Why are cards so popular? They organize information into digestible, scannable chunks that work on ANY screen size!
+</div>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Show actual screenshots from these sites if possible (have them ready)</li>
+<li>Ask students to name other sites with card layouts</li>
+<li>Emphasize: "This is THE most common design pattern in modern web design"</li>
+<li>Time: 3 minutes</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 4: The Challenge of Responsive Design -->
+<div class="slide">
+<h1>The Challenge: Multiple Screen Sizes</h1>
+<div class="example-box">
+<h3>Modern websites need to work on:</h3>
+<ul style="font-size: 22px;">
+<li>📱 <strong>Phones</strong> - 320px to 480px wide</li>
+<li>📱 <strong>Tablets</strong> - 768px to 1024px wide</li>
+<li>💻 <strong>Laptops</strong> - 1024px to 1440px wide</li>
+<li>🖥️ <strong>Desktop Monitors</strong> - 1440px to 2560px+ wide</li>
+</ul>
+</div>
+
+<div class="key-point">
+Over 60% of web traffic comes from mobile devices! If your site doesn't work on mobile, you're losing more than half your audience.
+</div>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Ask: "What device do YOU use most for browsing websites?"</li>
+<li>Discuss the mobile-first world we live in</li>
+<li>Share the statistic about mobile traffic</li>
+<li>Time: 3 minutes</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 5: What is Mobile-First Design? -->
+<div class="slide">
+<h1>What is Mobile-First Design?</h1>
+<h2>Start Small, Build Up</h2>
+
+<div class="example-box">
+<h3>Mobile-First Approach:</h3>
+<ol style="font-size: 22px;">
+<li><strong>Start</strong> with mobile layout (smallest screen)</li>
+<li><strong>Add</strong> tablet styles with media queries</li>
+<li><strong>Enhance</strong> desktop styles with more media queries</li>
+</ol>
+</div>
+
+<h2 style="margin-top: 40px;">Why Mobile-First?</h2>
+<ul style="font-size: 20px;">
+<li>✅ Forces you to focus on essential content</li>
+<li>✅ Better performance on mobile devices</li>
+<li>✅ Easier to add features than remove them</li>
+<li>✅ Most users are on mobile anyway!</li>
+</ul>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Draw or show diagram: phone → tablet → desktop</li>
+<li>Emphasize: "We write CSS for mobile FIRST, no media query needed"</li>
+<li>Explain: "Then we use media queries to add complexity for larger screens"</li>
+<li>Time: 4 minutes</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 6: Media Queries Explained -->
+<div class="slide">
+<h1>Media Queries: The Key to Responsive Design</h1>
+<h2>What is a Media Query?</h2>
+<p style="font-size: 20px;">A media query applies CSS styles ONLY when certain conditions are met (like screen width).</p>
+
+<div class="code-block">
+/* Mobile styles - NO media query needed */
+.card-container {
+  grid-template-columns: 1fr;
+}
+
+/* Tablet styles - 768px and wider */
+@media (min-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Desktop styles - 1024px and wider */
+@media (min-width: 1024px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+</div>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Walk through syntax: @media (condition) { styles }</li>
+<li>Emphasize: min-width means "at least this wide"</li>
+<li>Point out: mobile needs NO media query - it's the default!</li>
+<li>Time: 4 minutes</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 7: Common Breakpoints -->
+<div class="slide">
+<h1>Standard Breakpoints</h1>
+<h2>Industry-Standard Screen Widths</h2>
+
+<div class="example-box">
+<table style="width: 100%; font-size: 20px; border-collapse: collapse;">
+<tr style="background: #3498db; color: white;">
+<th style="padding: 15px; text-align: left;">Device</th>
+<th style="padding: 15px; text-align: left;">Breakpoint</th>
+<th style="padding: 15px; text-align: left;">Columns</th>
+</tr>
+<tr style="background: #ecf0f1;">
+<td style="padding: 15px;">📱 Mobile</td>
+<td style="padding: 15px;">Default (no query)</td>
+<td style="padding: 15px;">1 column</td>
+</tr>
+<tr>
+<td style="padding: 15px;">📱 Tablet</td>
+<td style="padding: 15px;">768px</td>
+<td style="padding: 15px;">2 columns</td>
+</tr>
+<tr style="background: #ecf0f1;">
+<td style="padding: 15px;">💻 Desktop</td>
+<td style="padding: 15px;">1024px</td>
+<td style="padding: 15px;">3 columns</td>
+</tr>
+<tr>
+<td style="padding: 15px;">🖥️ Large Desktop</td>
+<td style="padding: 15px;">1440px+</td>
+<td style="padding: 15px;">4+ columns</td>
+</tr>
+</table>
+</div>
+
+<div class="key-point">
+These aren't rules - they're guidelines! Choose breakpoints based on YOUR content.
+</div>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Explain why 768px (iPad portrait width)</li>
+<li>Explain why 1024px (iPad landscape, small laptops)</li>
+<li>Today we'll use 768px and 1024px for our project</li>
+<li>Time: 3 minutes</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 8: CSS Grid Basics -->
+<div class="slide">
+<h1>CSS Grid for Card Layouts</h1>
+<h2>Why CSS Grid?</h2>
+<ul style="font-size: 22px;">
+<li>Perfect for 2D layouts (rows AND columns)</li>
+<li>Simple, powerful syntax</li>
+<li>Automatically handles spacing with <code>gap</code> property</li>
+<li>Items flow naturally into grid cells</li>
+</ul>
+
+<h2>Essential Grid Properties:</h2>
+<div class="code-block">
+.card-container {
+  display: grid;                    /* Turn on grid */
+  grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns */
+  gap: 20px;                        /* Space between items */
+}
+</div>
+
+<div class="example-box">
+<strong>Understanding "fr" unit:</strong> 1fr = 1 fraction of available space
+<br>1fr 1fr 1fr = three equal columns
+</div>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Review: "Who remembers what display: grid does?"</li>
+<li>Explain fr unit: "Imagine cutting a pizza into equal slices"</li>
+<li>Show that gap replaces manual margin calculations</li>
+<li>Time: 4 minutes</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 9: Demo Time! -->
+<div class="slide">
+<h1>Code-Along: Building a Card</h1>
+<h2>Let's build ONE card together</h2>
+
+<h3>Step 1: HTML Structure</h3>
+<div class="code-block">
+&lt;div class="card"&gt;
+  &lt;img src="image.jpg" alt="Description"&gt;
+  &lt;h3&gt;Card Title&lt;/h3&gt;
+  &lt;p&gt;Card description text.&lt;/p&gt;
+  &lt;button&gt;Learn More&lt;/button&gt;
+&lt;/div&gt;
+</div>
+
+<h3>Step 2: Basic Card Styling</h3>
+<div class="code-block">
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+</div>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>STOP and have students code along</li>
+<li>Create the HTML first, verify it displays</li>
+<li>Add CSS piece by piece</li>
+<li>Explain each property as you add it</li>
+<li>Time: 8 minutes for full code-along</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 10: Making Images Responsive -->
+<div class="slide">
+<h1>Responsive Images</h1>
+<h2>The Problem</h2>
+<p style="font-size: 20px;">Images with fixed sizes break responsive layouts!</p>
+
+<h2>The Solution</h2>
+<div class="code-block">
+.card img {
+  width: 100%;           /* Fill card width */
+  height: 250px;         /* Consistent height */
+  object-fit: cover;     /* Crop to fit, no distortion */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+</div>
+
+<div class="example-box">
+<strong>object-fit options:</strong>
+<ul>
+<li><strong>cover</strong> - Fills space, crops excess ✓ (best for cards)</li>
+<li><strong>contain</strong> - Fits entirely, may leave empty space</li>
+<li><strong>fill</strong> - Stretches to fit (can distort)</li>
+</ul>
+</div>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Demonstrate what happens WITHOUT object-fit (distortion)</li>
+<li>Show the difference between cover, contain, and fill</li>
+<li>Explain why we need both width: 100% AND fixed height</li>
+<li>Time: 4 minutes</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 11: Adding Hover Effects -->
+<div class="slide">
+<h1>Interactive Cards with Hover Effects</h1>
+<h2>Make cards respond to user interaction</h2>
+
+<div class="code-block">
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;  /* Smooth animation */
+}
+
+.card:hover {
+  transform: translateY(-8px);    /* Lift up */
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2); /* Bigger shadow */
+}
+</div>
+
+<div class="key-point">
+The transition property goes on the BASE element (.card), NOT on the hover state!
+</div>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Demonstrate the hover effect live in browser</li>
+<li>Explain transform: translateY(-8px) means move UP 8 pixels</li>
+<li>Show what happens without transition (instant, jarring)</li>
+<li>Common mistake: putting transition on :hover instead of base element</li>
+<li>Time: 4 minutes</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 12: Building the Grid Container -->
+<div class="slide">
+<h1>Creating the Card Grid</h1>
+<h2>Mobile Layout (Default)</h2>
+
+<div class="code-block">
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;  /* 1 column on mobile */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+</div>
+
+<div class="example-box">
+<strong>Key Properties Explained:</strong>
+<ul style="font-size: 18px;">
+<li><strong>max-width: 1200px</strong> - Prevents cards from getting too wide on huge screens</li>
+<li><strong>margin: 0 auto</strong> - Centers the container horizontally</li>
+<li><strong>gap: 20px</strong> - Creates consistent space between all cards</li>
+</ul>
+</div>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Code this along with students</li>
+<li>Have them wrap all 6 cards in a div with class="card-container"</li>
+<li>Test in browser - should see 1 column of cards</li>
+<li>Time: 5 minutes</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 13: Adding Tablet Layout -->
+<div class="slide">
+<h1>Tablet Layout: 2 Columns</h1>
+<h2>Using Media Query for 768px+</h2>
+
+<div class="code-block">
+/* Tablet: 2 columns at 768px and wider */
+@media (min-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+  
+  .card button {
+    width: auto;  /* Button no longer full width */
+  }
+}
+</div>
+
+<div class="key-point">
+Remember: Tablet inherits ALL mobile styles, then adds or overrides!
+</div>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Add this code together</li>
+<li>Test immediately - use DevTools to resize browser</li>
+<li>Show that below 768px = 1 column, above = 2 columns</li>
+<li>Point out we're ONLY changing what needs to change</li>
+<li>Time: 5 minutes</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 14: Adding Desktop Layout -->
+<div class="slide">
+<h1>Desktop Layout: 3 Columns</h1>
+<h2>Using Media Query for 1024px+</h2>
+
+<div class="code-block">
+/* Desktop: 3 columns at 1024px and wider */
+@media (min-width: 1024px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+  
+  .card img {
+    height: 200px;  /* Shorter images for better proportions */
+  }
+}
+</div>
+
+<div class="example-box">
+<strong>Progressive Enhancement:</strong><br>
+Mobile → Tablet → Desktop<br>
+Each level builds on the previous one!
+</div>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Add this final media query together</li>
+<li>Test at all three breakpoints</li>
+<li>Slowly resize browser to show smooth transitions</li>
+<li>Explain: each breakpoint only changes what needs to change</li>
+<li>Time: 5 minutes</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 15: Testing Responsive Design -->
+<div class="slide">
+<h1>Testing Your Responsive Layout</h1>
+<h2>Using Chrome DevTools</h2>
+
+<ol style="font-size: 22px;">
+<li>Open your page in Chrome</li>
+<li>Press <strong>F12</strong> to open DevTools</li>
+<li>Click the <strong>device toggle</strong> button (phone/tablet icon)</li>
+<li>Select different devices from dropdown OR</li>
+<li>Drag the edge to manually resize</li>
+</ol>
+
+<div class="key-point">
+Watch the layout change at your breakpoints: 768px and 1024px
+</div>
+
+<div class="example-box">
+<strong>What to check:</strong>
+<ul>
+<li>✓ Cards stack on mobile (320px)</li>
+<li>✓ 2 columns appear at 768px</li>
+<li>✓ 3 columns appear at 1024px</li>
+<li>✓ Images scale properly at all sizes</li>
+<li>✓ Text is readable at all sizes</li>
+</ul>
+</div>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Demonstrate DevTools device mode</li>
+<li>Show how to select iPhone, iPad, etc.</li>
+<li>Slowly drag resize to show breakpoint transitions</li>
+<li>Time: 3 minutes</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 16: Independent Practice Time -->
+<div class="slide">
+<h1>Your Turn: Build Your Card Grid!</h1>
+<h2>Project Requirements</h2>
+
+<ul style="font-size: 22px;">
+<li>✓ Create <strong>6 cards</strong> with your chosen theme</li>
+<li>✓ Each card: image, title, description, button</li>
+<li>✓ <strong>Mobile:</strong> 1 column layout</li>
+<li>✓ <strong>Tablet (768px+):</strong> 2 column layout</li>
+<li>✓ <strong>Desktop (1024px+):</strong> 3 column layout</li>
+<li>✓ Working hover effects on cards</li>
+<li>✓ Responsive images</li>
+</ul>
+
+<div class="key-point">
+You have 20 minutes! Refer to your student instructions handout for detailed steps.
+</div>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Set a timer for 20 minutes</li>
+<li>Circulate to help students</li>
+<li>Check progress at 10 minutes (should have HTML done and mobile CSS started)</li>
+<li>Check again at 15 minutes (should have at least one media query working)</li>
+<li>Common issues: forgetting viewport meta tag, using max-width instead of min-width</li>
+<li>Time: 20 minutes</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 17: Common Mistakes to Avoid -->
+<div class="slide">
+<h1>Common Mistakes & Quick Fixes</h1>
+
+<div class="example-box">
+<h3>❌ Mistake 1: Using max-width</h3>
+<div class="code-block">
+@media (max-width: 768px) { /* WRONG for mobile-first! */
+</div>
+<strong>Fix:</strong> Use min-width for mobile-first approach
+</div>
+
+<div class="example-box">
+<h3>❌ Mistake 2: Forgetting box-sizing</h3>
+<p>Cards overflow container due to padding</p>
+<strong>Fix:</strong> Add box-sizing: border-box to reset
+</div>
+
+<div class="example-box">
+<h3>❌ Mistake 3: Fixed image widths</h3>
+<div class="code-block">
+img { width: 400px; } /* Breaks on small screens! */
+</div>
+<strong>Fix:</strong> Use width: 100% and object-fit: cover
+</div>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Reference this slide when helping struggling students</li>
+<li>Post common issues you see on board</li>
+<li>Time: Built into practice time, reference as needed</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 18: Gallery Walk -->
+<div class="slide">
+<h1>Share Your Work!</h1>
+<h2>Gallery Walk (5 minutes)</h2>
+
+<div class="example-box">
+<strong>Instructions:</strong>
+<ol style="font-size: 20px;">
+<li>Save your work and open it in full screen</li>
+<li>Walk around and view 2-3 classmates' projects</li>
+<li>Notice different themes and design choices</li>
+<li>Test their responsive layouts by resizing the window</li>
+</ol>
+</div>
+
+<div class="key-point">
+Look for creative themes, smooth hover effects, and layouts that work at all three breakpoints!
+</div>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Have students leave their computers open</li>
+<li>Set 5-minute timer</li>
+<li>Encourage positive feedback</li>
+<li>You circulate too - take note of exemplary work</li>
+<li>Time: 5 minutes</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 19: Class Discussion -->
+<div class="slide">
+<h1>Reflection & Discussion</h1>
+<h2>Let's Talk About the Experience</h2>
+
+<div class="example-box">
+<h3>Discussion Questions:</h3>
+<ul style="font-size: 22px;">
+<li>What was the most challenging part of this project?</li>
+<li>How did you test your layout on different screen sizes?</li>
+<li>Why is mobile-first design important?</li>
+<li>What would you improve if you had more time?</li>
+<li>Where have you seen card layouts used well?</li>
+</ul>
+</div>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Call on 3-4 students to share</li>
+<li>Acknowledge common challenges</li>
+<li>Reinforce key concepts: mobile-first, media queries, CSS Grid</li>
+<li>Preview next lesson (mention we'll build on these skills)</li>
+<li>Time: 3 minutes</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 20: Key Takeaways -->
+<div class="slide">
+<h1>Key Takeaways</h1>
+<h2>What We Learned Today</h2>
+
+<div class="key-point">
+<strong>1. Mobile-First Design</strong><br>
+Start with mobile, enhance for larger screens using min-width media queries
+</div>
+
+<div class="key-point">
+<strong>2. CSS Grid for Layouts</strong><br>
+display: grid with grid-template-columns and gap makes responsive layouts simple
+</div>
+
+<div class="key-point">
+<strong>3. Standard Breakpoints</strong><br>
+768px (tablet) and 1024px (desktop) are industry standards
+</div>
+
+<div class="key-point">
+<strong>4. Progressive Enhancement</strong><br>
+Each breakpoint builds on previous styles - only change what needs changing
+</div>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Emphasize these are professional, real-world skills</li>
+<li>Mention that card layouts are used everywhere</li>
+<li>Remind them to refer to solution files for reference</li>
+<li>Time: 2 minutes</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 21: Exit Ticket -->
+<div class="slide">
+<h1>Exit Ticket</h1>
+<h2>Before You Leave...</h2>
+
+<div class="example-box">
+<p style="font-size: 20px;">Complete the exit ticket to show what you learned today!</p>
+
+<h3>It covers:</h3>
+<ul style="font-size: 20px;">
+<li>Mobile-first design concept</li>
+<li>Media query interpretation</li>
+<li>CSS Grid properties</li>
+<li>Your reflection on the lesson</li>
+</ul>
+</div>
+
+<div class="key-point">
+This should take 3-5 minutes. Submit before you leave class!
+</div>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Distribute exit ticket (digital or paper)</li>
+<li>Set 5-minute timer</li>
+<li>Collect as students finish</li>
+<li>Thank students for their effort</li>
+<li>Remind about homework if any</li>
+<li>Time: 5 minutes</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 22: Homework & Next Steps -->
+<div class="slide">
+<h1>Homework & Extension Activities</h1>
+
+<h2>Required:</h2>
+<ul style="font-size: 20px;">
+<li>✓ Complete your 6-card project if not finished</li>
+<li>✓ Submit Codespace link and screenshots</li>
+<li>✓ Test your project on your phone or tablet at home</li>
+</ul>
+
+<h2>Optional Extensions (Bonus Points!):</h2>
+<ul style="font-size: 20px;">
+<li>🌟 Add CSS transitions to your buttons</li>
+<li>🌟 Implement different gap values for different breakpoints</li>
+<li>🌟 Add a header and footer to your page</li>
+<li>🌟 Include accessibility features (alt text, ARIA labels)</li>
+<li>🌟 Research and try CSS Grid's auto-fit/auto-fill properties</li>
+</ul>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Write due date on board</li>
+<li>Clarify submission process</li>
+<li>Answer any final questions</li>
+<li>Time: 2 minutes</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 23: Resources & Help -->
+<div class="slide">
+<h1>Resources for Continued Learning</h1>
+
+<h2>CSS Grid & Responsive Design:</h2>
+<ul style="font-size: 20px;">
+<li><strong>CSS-Tricks:</strong> Complete Guide to Grid</li>
+<li><strong>MDN Web Docs:</strong> CSS Grid Layout</li>
+<li><strong>Google Web Fundamentals:</strong> Responsive Web Design Basics</li>
+</ul>
+
+<h2>Testing Tools:</h2>
+<ul style="font-size: 20px;">
+<li><strong>Chrome DevTools:</strong> Device Mode (F12)</li>
+<li><strong>Responsive Design Checker:</strong> Online tools</li>
+<li><strong>Your actual phone/tablet:</strong> Best real-world test!</li>
+</ul>
+
+<div class="key-point">
+Questions? Check the solution files or ask for help!
+</div>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Remind students solution files are available</li>
+<li>Office hours or help session information</li>
+<li>Preview next lesson topic</li>
+<li>Time: 1 minute</li>
+</ul>
+</div>
+</div>
+
+<!-- Slide 24: Thank You -->
+<div class="slide">
+<h1 style="text-align: center; font-size: 48px; margin-top: 150px;">Great Work Today!</h1>
+<p style="text-align: center; font-size: 28px; color: #7f8c8d; margin-top: 50px;">See you next class!</p>
+
+<div class="presenter-notes">
+<strong>Presenter Notes:</strong>
+<ul>
+<li>Thank students for their participation</li>
+<li>Compliment specific good work you saw</li>
+<li>Dismiss class</li>
+</ul>
+</div>
+</div>
+
+</body>
+</html>
