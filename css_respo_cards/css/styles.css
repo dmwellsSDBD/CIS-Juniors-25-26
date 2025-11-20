@@ -1,0 +1,218 @@
+/* ===================================
+   RESPONSIVE CARD GRID - SOLUTION
+   Mobile-First Approach
+   =================================== */
+
+/* ===================================
+   RESET & BASE STYLES
+   =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* ===================================
+   HEADER STYLES
+   =================================== */
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ===================================
+   MOBILE STYLES (DEFAULT - NO MEDIA QUERY)
+   Single column layout for phones
+   =================================== */
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: 1 column */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* ===================================
+   CARD COMPONENT STYLES
+   =================================== */
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    /* Transition makes hover effects smooth */
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    /* Card "lifts" on hover with stronger shadow */
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    /* object-fit: cover ensures images fill the space without distortion */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    /* Higher line-height improves readability */
+}
+
+.card button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%; /* Full width button on mobile */
+}
+
+.card button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card button:active {
+    transform: translateY(0);
+    /* Button "presses down" when clicked */
+}
+
+/* ===================================
+   FOOTER STYLES
+   =================================== */
+footer {
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+    padding: 20px;
+    opacity: 0.8;
+}
+
+/* ===================================
+   TABLET STYLES
+   2 column layout for tablets (768px and wider)
+   =================================== */
+
+@media (min-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr 1fr; /* Tablet: 2 columns */
+        gap: 25px;
+        padding: 0 20px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .card button {
+        width: auto; /* Button no longer full width */
+        padding: 12px 32px;
+    }
+}
+
+/* ===================================
+   DESKTOP STYLES
+   3 column layout for desktops (1024px and wider)
+   =================================== */
+
+@media (min-width: 1024px) {
+    .card-container {
+        grid-template-columns: 1fr 1fr 1fr; /* Desktop: 3 columns */
+        gap: 30px;
+        padding: 0;
+    }
+
+    header h1 {
+        font-size: 3.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .card img {
+        height: 200px;
+        /* Slightly shorter images on desktop for better proportions */
+    }
+}
+
+/* ===================================
+   RESPONSIVE TYPOGRAPHY
+   Adjust font sizes for better readability
+   =================================== */
+
+@media (max-width: 480px) {
+    /* Extra small phones */
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .card h3 {
+        font-size: 1.3rem;
+    }
+
+    .card p {
+        font-size: 0.95rem;
+    }
+}
+
+/* ===================================
+   PRINT STYLES (BONUS)
+   =================================== */
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .card {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+
+    .card button {
+        display: none;
+    }
+}
