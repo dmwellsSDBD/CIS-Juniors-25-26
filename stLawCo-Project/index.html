@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover St. Lawrence County | New York's North Country</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ==================== NAVIGATION BAR ==================== -->
+    <!-- Responsive Flexbox navigation with sticky positioning -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Brand logo/name -->
+            <div class="nav-brand">St. Lawrence County</div>
+            
+            <!-- Navigation menu items arranged horizontally with Flexbox -->
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#attractions">Attractions</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION 1 ==================== -->
+    <!-- First hero featuring the St. Lawrence River -->
+    <section class="hero hero-1">
+        <!-- Responsive full-width hero image -->
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=600&fit=crop" alt="St. Lawrence River scenic view">
+        
+        <!-- Overlaid content positioned absolutely over the image -->
+        <div class="hero-content">
+            <h1>Discover New York's North Country</h1>
+            <p>Experience the natural beauty and rich heritage of St. Lawrence County, where the river meets the Adirondacks</p>
+            <a href="#attractions" class="btn btn-primary">Learn More</a>
+        </div>
+    </section>
+
+    <!-- ==================== CARD GRID SECTION ==================== -->
+    <!-- Responsive grid showcasing St. Lawrence County attractions -->
+    <section class="cards-section">
+        <div class="container">
+            <h2 class="section-title">Explore St. Lawrence County</h2>
+            
+            <!-- CSS Grid container - responsive from 1 to 2 to 3 columns -->
+            <div class="cards-grid">
+                
+                <!-- ========== CARD 1: St. Lawrence River ========== -->
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=250&fit=crop" alt="St. Lawrence River fishing">
+                    <div class="card-content">
+                        <h3>World-Class Fishing</h3>
+                        <p>The St. Lawrence River offers some of the finest bass fishing in North America. Cast your line in waters that challenge anglers from around the world.</p>
+                        <a href="#fishing" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- ========== CARD 2: State Parks ========== -->
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?w=400&h=250&fit=crop" alt="Adirondack State Park">
+                    <div class="card-content">
+                        <h3>Beautiful State Parks</h3>
+                        <p>Explore five stunning state parks along the Seaway Trail, including Cedar Point, Jacques Cartier, and Robert Moses. Perfect for camping, hiking, and water sports.</p>
+                        <a href="#parks" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- ========== CARD 3: Adirondack Wilderness ========== -->
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop" alt="Adirondack Mountains">
+                    <div class="card-content">
+                        <h3>Adirondack Adventures</h3>
+                        <p>The southeastern portion of our county lies within the legendary Adirondack Park. Hike pristine trails, canoe remote lakes, and experience true wilderness.</p>
+                        <a href="#adirondacks" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- ========== CARD 4: Higher Education ========== -->
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=250&fit=crop" alt="College campus">
+                    <div class="card-content">
+                        <h3>Five Outstanding Colleges</h3>
+                        <p>Home to SUNY Canton, SUNY Potsdam, Clarkson University, St. Lawrence University, and SUNY Canton. Education and culture thrive in our communities.</p>
+                        <a href="#education" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- ========== CARD 5: Historic Sites ========== -->
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1564501049812-8be68548f9c0?w=400&h=250&fit=crop" alt="Historic building">
+                    <div class="card-content">
+                        <h3>Rich History & Culture</h3>
+                        <p>Visit the Frederic Remington Art Museum, tour Singer Castle on Dark Island, or explore the heritage of the Thousand Islands region.</p>
+                        <a href="#history" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- ========== CARD 6: Winter Recreation ========== -->
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=250&fit=crop" alt="Winter sports">
+                    <div class="card-content">
+                        <h3>Winter Wonderland</h3>
+                        <p>Embrace winter with skiing, snowmobiling, ice fishing, and cross-country skiing. Our North Country winters offer endless outdoor adventures.</p>
+                        <a href="#winter" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== HERO SECTION 2 ==================== -->
+    <!-- Second hero featuring Adirondack wilderness -->
+    <section class="hero hero-2">
+        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200&h=600&fit=crop" alt="Adirondack wilderness lake">
+        <div class="hero-content">
+            <h1>Experience the Adirondacks</h1>
+            <p>New York's largest county offers 2,821 square miles of natural beauty, from river valleys to mountain peaks</p>
+            <a href="#explore" class="btn btn-primary">Learn More</a>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <!-- Footer with CSS Grid layout containing 4 sections -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <!-- ========== FOOTER NAVIGATION ========== -->
+                <div class="footer-section footer-nav">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#attractions">Attractions</a></li>
+                        <li><a href="#events">Events & Activities</a></li>
+                        <li><a href="#about">About the County</a></li>
+                        <li><a href="#lodging">Places to Stay</a></li>
+                        <li><a href="#dining">Dining</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- ========== COPYRIGHT SECTION ========== -->
+                <div class="footer-section footer-copyright">
+                    <h3>Copyright</h3>
+                    <p>&copy; 2024 St. Lawrence County Tourism. All rights reserved.</p>
+                    <p>St. Lawrence County, New York</p>
+                    <p>Canton, NY 13617</p>
+                </div>
+
+                <!-- ========== FAIR USE STATEMENT ========== -->
+                <div class="footer-section footer-disclaimer">
+                    <h3>Educational Use</h3>
+                    <p>This website was created for educational purposes as part of a Computer Science class project at Norwood-Norfolk High School.</p>
+                    <p>Images and content are used under fair use guidelines for educational purposes. All trademarks and copyrights belong to their respective owners.</p>
+                </div>
+
+                <!-- ========== CONTACT FORM ========== -->
+                <div class="footer-section footer-contact">
+                    <h3>Contact Us</h3>
+                    <form action="mailto:student@example.com" method="POST" enctype="text/plain">
+                        
+                        <!-- Name input field -->
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name">
+                        
+                        <!-- Email input field -->
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        
+                        <!-- Message textarea -->
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required placeholder="Your message here..."></textarea>
+                        
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== IMPLEMENTATION NOTES ==================== -->
+    <!--
+    
+    This solution demonstrates all required elements:
+    
+    1. FLEXBOX NAVIGATION:
+       - Horizontal menu using display: flex
+       - justify-content: space-between for logo and menu
+       - Responsive with sticky positioning
+    
+    2. HERO SECTIONS:
+       - Two full-width responsive hero images
+       - Overlaid content using position: absolute
+       - Call-to-action buttons with hover effects
+    
+    3. RESPONSIVE GRID:
+       - CSS Grid with display: grid
+       - 1 column mobile, 2 column tablet, 3 column desktop
+       - Max-width of 1400px maintained in container
+    
+    4. CARDS:
+       - Six cards showcasing St. Lawrence County features
+       - Each with image, heading, description, and button
+       - Hover effects for interactivity
+    
+    5. FOOTER GRID:
+       - Four sections using CSS Grid
+       - Navigation links (vertical list)
+       - Copyright information
+       - Educational fair use statement
+       - Contact form with mailto: action
+    
+    6. COLOR SCHEME:
+       - Primary Blue (#003366) - navigation, footer
+       - Secondary Blue (#0066CC) - buttons
+       - Accent Gold (#FFB81C) - primary buttons, highlights
+       - Light Gray (#F5F5F5) - section backgrounds
+    
+    LOCAL CONTEXT:
+    - All content relates to St. Lawrence County, NY
+    - References to local attractions and features
+    - Mentions North Country school district context
+    - Includes Adirondack and St. Lawrence River themes
+    
+    -->
+
+</body>
+</html>

@@ -1,0 +1,511 @@
+/* ==================== ST. LAWRENCE COUNTY LANDING PAGE STYLES ==================== */
+/* CSS Stylesheet for Responsive Landing Page Project */
+
+/* ==================== CSS RESET & BASE STYLES ==================== */
+/* TODO: These base styles are provided - understand what they do */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #FFFFFF;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==================== COLOR VARIABLES ==================== */
+/* TODO: These CSS custom properties store the St. Lawrence County color scheme */
+:root {
+    --primary-blue: #003366;
+    --secondary-blue: #0066CC;
+    --accent-gold: #FFB81C;
+    --light-gray: #F5F5F5;
+    --dark-gray: #333333;
+    --white: #FFFFFF;
+}
+
+/* ==================== CONTAINER ==================== */
+/* TODO: This container centers content and sets max-width */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==================== NAVIGATION BAR STYLES ==================== */
+/* TODO: Style the navigation bar using Flexbox */
+/* Requirements:
+   - Use Flexbox for layout
+   - Horizontal menu items on desktop
+   - Responsive design for mobile
+   - Use the St. Lawrence County color scheme */
+
+.navbar {
+    /* TODO: Set background color to primary blue */
+    
+    /* TODO: Add padding (15px top/bottom) */
+    
+    /* TODO: Make it stick to top with position: sticky */
+    
+    /* TODO: Set z-index to 100 so it stays on top */
+    
+}
+
+.navbar .container {
+    /* TODO: Use Flexbox to arrange brand and menu */
+    /* display: flex */
+    
+    /* TODO: Space items apart with justify-content */
+    
+    /* TODO: Vertically center items with align-items */
+    
+}
+
+.nav-brand {
+    /* TODO: Style the brand/logo */
+    /* Set color to white */
+    
+    /* Set font-size to 1.5rem */
+    
+    /* Make font-weight bold */
+    
+}
+
+.nav-menu {
+    /* TODO: Use Flexbox for horizontal menu */
+    
+    /* TODO: Add gap between menu items (2rem) */
+    
+}
+
+.nav-menu li a {
+    /* TODO: Style the navigation links */
+    /* Set color to white */
+    
+    /* Add transition for hover effect (0.3s) */
+    
+}
+
+.nav-menu li a:hover {
+    /* TODO: Change color on hover to accent gold */
+    
+}
+
+/* ==================== HERO SECTION STYLES ==================== */
+/* TODO: Style the hero sections */
+/* Requirements:
+   - Full width responsive images
+   - Overlaid content (heading, text, button)
+   - Use relative/absolute positioning */
+
+.hero {
+    /* TODO: Set position to relative (for absolute positioning of content) */
+    
+    /* TODO: Set width to 100% */
+    
+    /* TODO: Set min-height (500px recommended) */
+    
+    /* TODO: Add margin-bottom (2rem) */
+    
+    /* TODO: Set overflow to hidden */
+    
+}
+
+.hero img {
+    /* TODO: Make image fill the entire width */
+    
+    /* TODO: Set height to 100% */
+    
+    /* TODO: Use object-fit: cover to maintain aspect ratio */
+    
+}
+
+.hero-content {
+    /* TODO: Position absolutely to overlay on image */
+    
+    /* TODO: Center using top: 50% and left: 50% */
+    
+    /* TODO: Use transform: translate(-50%, -50%) to perfectly center */
+    
+    /* TODO: Set text-align to center */
+    
+    /* TODO: Set text color to white */
+    
+    /* TODO: Add text-shadow for readability (2px 2px 4px rgba(0,0,0,0.7)) */
+    
+    /* TODO: Set z-index to 2 */
+    
+}
+
+.hero-content h1 {
+    /* TODO: Set font-size (3rem recommended) */
+    
+    /* TODO: Add margin-bottom (1rem) */
+    
+}
+
+.hero-content p {
+    /* TODO: Set font-size (1.2rem) */
+    
+    /* TODO: Add margin-bottom (2rem) */
+    
+    /* TODO: Set max-width (600px) to prevent text from being too wide */
+    
+    /* TODO: Center with margin: 0 auto 2rem */
+    
+}
+
+/* ==================== BUTTON STYLES ==================== */
+/* TODO: Create reusable button styles */
+
+.btn {
+    /* TODO: Display as inline-block */
+    
+    /* TODO: Add padding (12px 30px) */
+    
+    /* TODO: Set font-size (1rem) */
+    
+    /* TODO: Remove border */
+    
+    /* TODO: Set border-radius (5px) */
+    
+    /* TODO: Set cursor to pointer */
+    
+    /* TODO: Add transition (0.3s) */
+    
+}
+
+.btn-primary {
+    /* TODO: Set background to accent gold */
+    
+    /* TODO: Set color to primary blue */
+    
+    /* TODO: Make font-weight bold */
+    
+}
+
+.btn-primary:hover {
+    /* TODO: Darken background on hover */
+    background-color: #E5A818;
+    /* TODO: Add transform: translateY(-2px) for lift effect */
+    
+}
+
+.btn-secondary {
+    /* TODO: Set background to secondary blue */
+    
+    /* TODO: Set color to white */
+    
+}
+
+.btn-secondary:hover {
+    /* TODO: Darken background on hover */
+    background-color: #0052A3;
+}
+
+/* ==================== CARDS SECTION ==================== */
+/* TODO: Style the cards section container */
+
+.cards-section {
+    /* TODO: Add padding (4rem 0) */
+    
+    /* TODO: Set background color to light gray */
+    
+}
+
+.section-title {
+    /* TODO: Center text */
+    
+    /* TODO: Set font-size (2.5rem) */
+    
+    /* TODO: Set color to primary blue */
+    
+    /* TODO: Add margin-bottom (3rem) */
+    
+}
+
+/* ==================== CARDS GRID ==================== */
+/* TODO: Create responsive grid using CSS Grid */
+/* Requirements:
+   - 1 column on mobile
+   - 2 columns on tablet (768px+)
+   - 3 columns on desktop (1024px+) */
+
+.cards-grid {
+    /* TODO: Use CSS Grid */
+    display: grid;
+    
+    /* TODO: Start with 1 column for mobile */
+    grid-template-columns: 1fr;
+    
+    /* TODO: Add gap between cards (2rem) */
+    
+}
+
+/* ==================== INDIVIDUAL CARD STYLES ==================== */
+/* TODO: Style each card */
+
+.card {
+    /* TODO: Set background to white */
+    
+    /* TODO: Add border-radius (10px) */
+    
+    /* TODO: Add box-shadow for depth */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    
+    /* TODO: Add overflow: hidden */
+    
+    /* TODO: Add transition (0.3s) */
+    
+}
+
+.card:hover {
+    /* TODO: Lift card on hover with transform */
+    transform: translateY(-10px);
+    
+    /* TODO: Increase shadow on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    /* TODO: Make image full width */
+    
+    /* TODO: Set height (250px) */
+    
+    /* TODO: Use object-fit: cover */
+    
+}
+
+.card-content {
+    /* TODO: Add padding (1.5rem) */
+    
+}
+
+.card-content h3 {
+    /* TODO: Set color to primary blue */
+    
+    /* TODO: Set font-size (1.5rem) */
+    
+    /* TODO: Add margin-bottom (1rem) */
+    
+}
+
+.card-content p {
+    /* TODO: Set color to dark gray */
+    
+    /* TODO: Add margin-bottom (1.5rem) */
+    
+    /* TODO: Set line-height (1.6) */
+    
+}
+
+/* ==================== FOOTER STYLES ==================== */
+/* TODO: Style the footer using CSS Grid */
+
+.footer {
+    /* TODO: Set background to primary blue */
+    
+    /* TODO: Set color to white */
+    
+    /* TODO: Add padding (3rem 0) */
+    
+    /* TODO: Add margin-top (2rem) */
+    
+}
+
+/* ==================== FOOTER GRID ==================== */
+/* TODO: Create responsive grid for footer sections */
+
+.footer-grid {
+    /* TODO: Use CSS Grid */
+    
+    /* TODO: Start with 1 column for mobile */
+    
+    /* TODO: Add gap (2rem) */
+    
+}
+
+.footer-section h3 {
+    /* TODO: Set color to accent gold */
+    
+    /* TODO: Add margin-bottom (1rem) */
+    
+    /* TODO: Set font-size (1.2rem) */
+    
+}
+
+/* ==================== FOOTER NAVIGATION ==================== */
+/* TODO: Style footer navigation links */
+
+.footer-nav ul {
+    /* TODO: Remove default list styling (already done in reset) */
+}
+
+.footer-nav li {
+    /* TODO: Add margin-bottom (0.5rem) */
+    
+}
+
+.footer-nav a {
+    /* TODO: Set color to white */
+    
+    /* TODO: Add transition (0.3s) */
+    
+}
+
+.footer-nav a:hover {
+    /* TODO: Change color on hover to accent gold */
+    
+}
+
+/* ==================== FOOTER COPYRIGHT & DISCLAIMER ==================== */
+/* TODO: These sections can use default styling or customize as desired */
+
+.footer-copyright p,
+.footer-disclaimer p {
+    /* TODO: Set font-size (0.9rem) */
+    
+    /* TODO: Set line-height (1.6) */
+    
+}
+
+/* ==================== FOOTER CONTACT FORM ==================== */
+/* TODO: Style the contact form */
+
+.footer-contact form {
+    /* TODO: Use Flexbox or Grid for layout */
+    
+}
+
+.footer-contact label {
+    /* TODO: Display as block */
+    
+    /* TODO: Add margin-bottom (0.5rem) */
+    
+    /* TODO: Make font-weight bold */
+    
+}
+
+.footer-contact input,
+.footer-contact textarea {
+    /* TODO: Set width to 100% */
+    
+    /* TODO: Add padding (10px) */
+    
+    /* TODO: Add margin-bottom (1rem) */
+    
+    /* TODO: Set border (1px solid #ddd) */
+    
+    /* TODO: Set border-radius (5px) */
+    
+    /* TODO: Set font-family to inherit */
+    
+}
+
+.footer-contact textarea {
+    /* TODO: Set min-height (100px) */
+    
+    /* TODO: Allow vertical resize only */
+    
+}
+
+/* ==================== MEDIA QUERIES ==================== */
+/* TODO: Add responsive breakpoints */
+
+/* ========== TABLET (768px and up) ========== */
+@media screen and (min-width: 768px) {
+    
+    /* TODO: Change cards grid to 2 columns */
+    .cards-grid {
+        
+    }
+    
+    /* TODO: Change footer grid to 2 columns */
+    .footer-grid {
+        
+    }
+    
+    /* TODO: Adjust hero content font sizes if needed */
+    
+}
+
+/* ========== DESKTOP (1024px and up) ========== */
+@media screen and (min-width: 1024px) {
+    
+    /* TODO: Change cards grid to 3 columns */
+    .cards-grid {
+        
+    }
+    
+    /* TODO: Change footer grid to 4 columns */
+    .footer-grid {
+        
+    }
+    
+    /* TODO: Increase hero heading size */
+    .hero-content h1 {
+        
+    }
+    
+}
+
+/* ==================== NOTES FOR STUDENTS ==================== */
+/*
+
+HELPFUL CSS TIPS:
+
+1. FLEXBOX QUICK REFERENCE:
+   display: flex;              - Creates flex container
+   flex-direction: row;        - Arranges items horizontally
+   justify-content: center;    - Centers items horizontally
+   align-items: center;        - Centers items vertically
+   gap: 20px;                  - Space between items
+
+2. CSS GRID QUICK REFERENCE:
+   display: grid;                          - Creates grid container
+   grid-template-columns: 1fr 1fr 1fr;     - 3 equal columns
+   grid-template-columns: repeat(3, 1fr);  - Same as above
+   gap: 20px;                              - Space between grid items
+
+3. RESPONSIVE DESIGN:
+   - Start with mobile styles (default)
+   - Add tablet styles at 768px
+   - Add desktop styles at 1024px
+   - Test by resizing browser window
+
+4. POSITIONING:
+   position: relative;   - Normal position, allows absolute children
+   position: absolute;   - Removes from flow, positions relative to parent
+   position: sticky;     - Sticks to viewport when scrolling
+
+5. COLOR USAGE:
+   Use var(--primary-blue) to reference CSS custom properties
+   Example: background-color: var(--primary-blue);
+
+6. TESTING YOUR WORK:
+   - Check navigation at different screen sizes
+   - Test hero images for responsiveness
+   - Verify grid changes from 1 to 2 to 3 columns
+   - Test hover effects on cards and buttons
+   - Try the contact form
+
+*/

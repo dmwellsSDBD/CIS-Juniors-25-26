@@ -1,0 +1,447 @@
+/* ==================== ST. LAWRENCE COUNTY LANDING PAGE STYLES ==================== */
+/* Complete Solution CSS - All styles implemented with detailed comments */
+
+/* ==================== CSS RESET & BASE STYLES ==================== */
+/* Remove default margins and padding, use border-box sizing for easier layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base body styles for consistent typography */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #FFFFFF;
+}
+
+/* Ensure all images are responsive by default */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Remove default link underlines and inherit color */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove default list styling */
+ul {
+    list-style: none;
+}
+
+/* ==================== COLOR VARIABLES ==================== */
+/* CSS custom properties for consistent color usage throughout */
+:root {
+    --primary-blue: #003366;      /* Dark navy blue for navigation and footer */
+    --secondary-blue: #0066CC;    /* Bright blue for secondary buttons */
+    --accent-gold: #FFB81C;       /* Gold/yellow for call-to-action elements */
+    --light-gray: #F5F5F5;        /* Light background for sections */
+    --dark-gray: #333333;         /* Main text color */
+    --white: #FFFFFF;             /* White for contrasts */
+}
+
+/* ==================== CONTAINER ==================== */
+/* Centered container with max-width to constrain content */
+.container {
+    max-width: 1400px;            /* Maximum width as specified in requirements */
+    margin: 0 auto;               /* Center horizontally */
+    padding: 0 20px;              /* Side padding for mobile spacing */
+}
+
+/* ==================== NAVIGATION BAR STYLES ==================== */
+/* Flexbox navigation that sticks to the top of viewport */
+
+.navbar {
+    background-color: var(--primary-blue);  /* St. Lawrence County primary color */
+    padding: 15px 0;                        /* Vertical padding */
+    position: sticky;                       /* Sticks to top when scrolling */
+    top: 0;                                 /* Stick at the very top */
+    z-index: 100;                           /* Ensure it stays above other content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+/* Flexbox container for brand and menu */
+.navbar .container {
+    display: flex;                   /* Use Flexbox for horizontal layout */
+    justify-content: space-between;  /* Space logo and menu to opposite ends */
+    align-items: center;             /* Vertically center items */
+}
+
+/* Brand/logo styling */
+.nav-brand {
+    color: var(--white);             /* White text for contrast */
+    font-size: 1.5rem;               /* Larger text for prominence */
+    font-weight: bold;               /* Bold for emphasis */
+}
+
+/* Navigation menu using Flexbox for horizontal layout */
+.nav-menu {
+    display: flex;                   /* Horizontal menu items */
+    gap: 2rem;                       /* Space between menu items */
+}
+
+/* Navigation link styling */
+.nav-menu li a {
+    color: var(--white);             /* White links on dark background */
+    transition: color 0.3s ease;     /* Smooth color transition on hover */
+}
+
+/* Hover effect for navigation links */
+.nav-menu li a:hover {
+    color: var(--accent-gold);       /* Gold color on hover for visual feedback */
+}
+
+/* ==================== HERO SECTION STYLES ==================== */
+/* Full-width hero sections with overlaid content */
+
+.hero {
+    position: relative;              /* Allows absolute positioning of child elements */
+    width: 100%;                     /* Full width of viewport */
+    min-height: 500px;               /* Minimum height for visual impact */
+    margin-bottom: 2rem;             /* Space below hero section */
+    overflow: hidden;                /* Hide any overflow from images */
+}
+
+/* Hero image styling for full coverage */
+.hero img {
+    width: 100%;                     /* Full width */
+    height: 100%;                    /* Full height of container */
+    object-fit: cover;               /* Cover entire area while maintaining aspect ratio */
+    object-position: center;         /* Center the image */
+}
+
+/* Content overlaid on hero image */
+.hero-content {
+    position: absolute;              /* Position over the image */
+    top: 50%;                        /* Center vertically */
+    left: 50%;                       /* Center horizontally */
+    transform: translate(-50%, -50%); /* Perfect centering using transform */
+    text-align: center;              /* Center text */
+    color: var(--white);             /* White text for visibility */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Shadow for text readability */
+    z-index: 2;                      /* Above the image */
+    width: 90%;                      /* Responsive width */
+    max-width: 800px;                /* Maximum width for readability */
+}
+
+/* Hero heading styling */
+.hero-content h1 {
+    font-size: 3rem;                 /* Large, impactful heading */
+    margin-bottom: 1rem;             /* Space below heading */
+    font-weight: bold;               /* Bold for emphasis */
+}
+
+/* Hero paragraph text */
+.hero-content p {
+    font-size: 1.2rem;               /* Larger than body text */
+    margin-bottom: 2rem;             /* Space before button */
+    max-width: 600px;                /* Constrain width for readability */
+    margin-left: auto;               /* Center the paragraph */
+    margin-right: auto;              /* Center the paragraph */
+}
+
+/* ==================== BUTTON STYLES ==================== */
+/* Reusable button component with variants */
+
+.btn {
+    display: inline-block;           /* Allows padding and acts like block element */
+    padding: 12px 30px;              /* Comfortable click target */
+    font-size: 1rem;                 /* Standard text size */
+    border: none;                    /* Remove default border */
+    border-radius: 5px;              /* Rounded corners */
+    cursor: pointer;                 /* Pointer cursor on hover */
+    transition: all 0.3s ease;       /* Smooth transition for hover effects */
+    font-weight: bold;               /* Bold text for emphasis */
+}
+
+/* Primary button - accent gold */
+.btn-primary {
+    background-color: var(--accent-gold); /* Gold background */
+    color: var(--primary-blue);          /* Dark blue text for contrast */
+}
+
+/* Primary button hover effect */
+.btn-primary:hover {
+    background-color: #E5A818;       /* Slightly darker gold */
+    transform: translateY(-2px);     /* Lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add shadow for lifted appearance */
+}
+
+/* Secondary button - blue */
+.btn-secondary {
+    background-color: var(--secondary-blue); /* Bright blue background */
+    color: var(--white);                     /* White text */
+}
+
+/* Secondary button hover effect */
+.btn-secondary:hover {
+    background-color: #0052A3;       /* Darker blue on hover */
+    transform: translateY(-2px);     /* Lift effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Shadow for depth */
+}
+
+/* ==================== CARDS SECTION ==================== */
+/* Container for the entire cards section */
+
+.cards-section {
+    padding: 4rem 0;                 /* Vertical padding for spacing */
+    background-color: var(--light-gray); /* Light gray background */
+}
+
+/* Section title styling */
+.section-title {
+    text-align: center;              /* Center the title */
+    font-size: 2.5rem;               /* Large heading */
+    color: var(--primary-blue);      /* St. Lawrence County blue */
+    margin-bottom: 3rem;             /* Space before grid */
+    font-weight: bold;               /* Bold for emphasis */
+}
+
+/* ==================== CARDS GRID ==================== */
+/* Responsive grid using CSS Grid - mobile first approach */
+
+.cards-grid {
+    display: grid;                   /* CSS Grid layout */
+    grid-template-columns: 1fr;      /* Single column for mobile (default) */
+    gap: 2rem;                       /* Space between cards */
+}
+
+/* ==================== INDIVIDUAL CARD STYLES ==================== */
+/* Card component with hover effects */
+
+.card {
+    background-color: var(--white);  /* White background */
+    border-radius: 10px;             /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden;                /* Hide overflow from rounded corners */
+    transition: all 0.3s ease;       /* Smooth transition for hover */
+}
+
+/* Card hover effect - lifts and increases shadow */
+.card:hover {
+    transform: translateY(-10px);    /* Lift card upward */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+/* Card image styling */
+.card img {
+    width: 100%;                     /* Full width of card */
+    height: 250px;                   /* Fixed height for consistency */
+    object-fit: cover;               /* Cover area while maintaining aspect ratio */
+}
+
+/* Card text content container */
+.card-content {
+    padding: 1.5rem;                 /* Padding around text content */
+}
+
+/* Card heading */
+.card-content h3 {
+    color: var(--primary-blue);      /* Blue heading */
+    font-size: 1.5rem;               /* Larger heading */
+    margin-bottom: 1rem;             /* Space below heading */
+}
+
+/* Card description text */
+.card-content p {
+    color: var(--dark-gray);         /* Dark gray text */
+    margin-bottom: 1.5rem;           /* Space before button */
+    line-height: 1.6;                /* Comfortable line spacing */
+}
+
+/* ==================== FOOTER STYLES ==================== */
+/* Footer with CSS Grid layout */
+
+.footer {
+    background-color: var(--primary-blue); /* Dark blue background */
+    color: var(--white);                   /* White text */
+    padding: 3rem 0;                       /* Vertical padding */
+    margin-top: 2rem;                      /* Space above footer */
+}
+
+/* ==================== FOOTER GRID ==================== */
+/* Responsive grid for footer sections - mobile first */
+
+.footer-grid {
+    display: grid;                   /* CSS Grid layout */
+    grid-template-columns: 1fr;      /* Single column for mobile (default) */
+    gap: 2rem;                       /* Space between sections */
+}
+
+/* Footer section headings */
+.footer-section h3 {
+    color: var(--accent-gold);       /* Gold color for section headings */
+    margin-bottom: 1rem;             /* Space below heading */
+    font-size: 1.2rem;               /* Slightly larger text */
+}
+
+/* ==================== FOOTER NAVIGATION ==================== */
+/* Vertical navigation list in footer */
+
+.footer-nav li {
+    margin-bottom: 0.5rem;           /* Space between links */
+}
+
+/* Footer navigation links */
+.footer-nav a {
+    color: var(--white);             /* White links */
+    transition: color 0.3s ease;     /* Smooth color transition */
+}
+
+/* Footer link hover effect */
+.footer-nav a:hover {
+    color: var(--accent-gold);       /* Gold on hover */
+}
+
+/* ==================== FOOTER COPYRIGHT & DISCLAIMER ==================== */
+/* Styling for copyright and disclaimer text */
+
+.footer-copyright p,
+.footer-disclaimer p {
+    font-size: 0.9rem;               /* Slightly smaller text */
+    line-height: 1.6;                /* Comfortable line spacing */
+    margin-bottom: 0.5rem;           /* Space between paragraphs */
+}
+
+/* ==================== FOOTER CONTACT FORM ==================== */
+/* Form styling for contact section */
+
+.footer-contact form {
+    display: flex;                   /* Flexbox for form layout */
+    flex-direction: column;          /* Stack form elements vertically */
+}
+
+/* Form labels */
+.footer-contact label {
+    display: block;                  /* Block display for proper spacing */
+    margin-bottom: 0.5rem;           /* Space below label */
+    font-weight: bold;               /* Bold labels */
+}
+
+/* Form inputs and textarea */
+.footer-contact input,
+.footer-contact textarea {
+    width: 100%;                     /* Full width of container */
+    padding: 10px;                   /* Internal padding */
+    margin-bottom: 1rem;             /* Space below each field */
+    border: 1px solid #ddd;          /* Light border */
+    border-radius: 5px;              /* Rounded corners */
+    font-family: inherit;            /* Use same font as rest of page */
+    font-size: 1rem;                 /* Standard text size */
+}
+
+/* Textarea specific styling */
+.footer-contact textarea {
+    min-height: 100px;               /* Minimum height for message area */
+    resize: vertical;                /* Allow vertical resizing only */
+}
+
+/* Form submit button inherits .btn .btn-primary styles */
+
+/* ==================== MEDIA QUERIES ==================== */
+/* Responsive breakpoints for tablet and desktop */
+
+/* ========== TABLET (768px and up) ========== */
+@media screen and (min-width: 768px) {
+    
+    /* Change cards grid to 2 columns on tablet */
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    }
+    
+    /* Change footer grid to 2 columns on tablet */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    }
+    
+    /* Increase hero heading size on larger screens */
+    .hero-content h1 {
+        font-size: 3.5rem;           /* Larger heading for tablet */
+    }
+    
+}
+
+/* ========== DESKTOP (1024px and up) ========== */
+@media screen and (min-width: 1024px) {
+    
+    /* Change cards grid to 3 columns on desktop */
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 equal columns as required */
+    }
+    
+    /* Change footer grid to 4 columns on desktop */
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for footer sections */
+    }
+    
+    /* Further increase hero heading size */
+    .hero-content h1 {
+        font-size: 4rem;             /* Largest heading for desktop */
+    }
+    
+    /* Adjust hero paragraph size */
+    .hero-content p {
+        font-size: 1.3rem;           /* Slightly larger paragraph text */
+    }
+    
+}
+
+/* ==================== IMPLEMENTATION SUMMARY ==================== */
+/*
+
+This CSS implements all required features:
+
+1. FLEXBOX NAVIGATION:
+   ✓ Horizontal layout with space-between
+   ✓ Sticky positioning at top of viewport
+   ✓ Hover effects on links
+   ✓ St. Lawrence County color scheme
+
+2. HERO SECTIONS:
+   ✓ Full-width responsive images
+   ✓ Absolutely positioned content overlay
+   ✓ Responsive text sizing
+   ✓ Call-to-action buttons with hover effects
+
+3. RESPONSIVE GRID:
+   ✓ Mobile: 1 column (default)
+   ✓ Tablet: 2 columns (768px+)
+   ✓ Desktop: 3 columns (1024px+)
+   ✓ Max-width 1400px in container
+   ✓ Gap spacing between cards
+
+4. CARD STYLES:
+   ✓ Consistent card design with images
+   ✓ Hover effects (lift and shadow)
+   ✓ Responsive image sizing
+   ✓ Button integration
+
+5. FOOTER GRID:
+   ✓ 4 sections using CSS Grid
+   ✓ Responsive: 1 col mobile, 2 col tablet, 4 col desktop
+   ✓ Navigation, copyright, disclaimer, contact form
+   ✓ Form styling with proper spacing
+
+6. COLOR SCHEME:
+   ✓ Primary Blue (#003366) - navigation, footer
+   ✓ Secondary Blue (#0066CC) - buttons
+   ✓ Accent Gold (#FFB81C) - CTAs, highlights
+   ✓ Light Gray (#F5F5F5) - section backgrounds
+   ✓ Consistent use throughout design
+
+BEST PRACTICES DEMONSTRATED:
+- Mobile-first responsive design
+- CSS custom properties for maintainability
+- Semantic class naming
+- Smooth transitions for user experience
+- Accessibility considerations (proper contrast)
+- Consistent spacing and typography
+- Reusable component styles (.btn, .card)
+
+*/
