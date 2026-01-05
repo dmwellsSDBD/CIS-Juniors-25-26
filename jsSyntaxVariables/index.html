@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Syntax and Variables - SLLBOCES</title>
+    <link rel="stylesheet" href="presentation-styles.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide 1: Title Slide -->
+        <div class="slide active" id="slide-1">
+            <div class="slide-content title-slide">
+                <h1 class="main-title">JavaScript</h1>
+                <h2 class="subtitle">Syntax and Variables</h2>
+                <div class="meta-info">
+                    <p>Introduction to JavaScript Programming</p>
+                    <p>Seaway Tech: Computer &amp; Information Science</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: JavaScript History -->
+        <div class="slide" id="slide-2">
+            <div class="slide-content">
+                <h1 class="slide-title">JavaScript History & Background</h1>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year primary">1995</div>
+                        <div class="timeline-content">
+                            <h3>Created by Brendan Eich</h3>
+                            <p>Developed for Netscape Navigator to enable dynamic web pages that could respond to user events like clicks and hovers</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year accent">1997</div>
+                        <div class="timeline-content">
+                            <h3>Standardized as ECMAScript</h3>
+                            <p>Ecma International created the ECMAScript specification. JavaScript is an implementation of ECMAScript, which continues to evolve with yearly releases</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <strong>Interesting Fact:</strong> Brendan Eich called "ECMAScript" an "unwanted trade name that sounds like a skin disease" - it was a compromise between competing organizations!
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: JavaScript Today -->
+        <div class="slide" id="slide-3">
+            <div class="slide-content">
+                <h1 class="slide-title">JavaScript Today</h1>
+                <div class="two-column">
+                    <div class="column">
+                        <h3>Why JavaScript Matters</h3>
+                        <ul class="bullet-list">
+                            <li>One of the most popular programming languages in the world</li>
+                            <li>Supported by every major web browser</li>
+                            <li>Powers modern web applications like Gmail and Google Maps</li>
+                            <li>Used beyond browsers with technologies like Node.js for servers</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3>How JavaScript Works</h3>
+                        <div class="content-box">
+                            <h4>Interpreted Language</h4>
+                            <p>JavaScript code is executed by an interpreter without being compiled to machine language first</p>
+                            <h4>JavaScript Engines</h4>
+                            <p>Modern engines use Just-In-Time (JIT) compilation to convert JavaScript into faster executable code at runtime</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Variables -->
+        <div class="slide" id="slide-4">
+            <div class="slide-content">
+                <h1 class="slide-title">Variables: Declaration & Assignment</h1>
+                <div class="definition-box">
+                    <strong>Variable:</strong> A named container that stores a value in memory
+                </div>
+                <div class="two-column">
+                    <div class="column">
+                        <h3>Declaration</h3>
+                        <p>Use the <code>let</code> keyword to declare a new variable</p>
+                        <div class="code-block">let score;</div>
+                    </div>
+                    <div class="column">
+                        <h3>Assignment</h3>
+                        <p>Assign a value to the variable using <code>=</code></p>
+                        <div class="code-block">score = 2;</div>
+                    </div>
+                </div>
+                <div class="full-width">
+                    <h3>Initialization</h3>
+                    <p>Declare and assign a value on the same line</p>
+                    <div class="code-block">let maxValue = 5;</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Identifiers -->
+        <div class="slide" id="slide-5">
+            <div class="slide-content">
+                <h1 class="slide-title">Identifiers & Naming Conventions</h1>
+                <p class="intro-text">An <strong>identifier</strong> is a name created for items like variables</p>
+                <div class="two-column">
+                    <div class="column">
+                        <div class="section-header primary">Rules for Identifiers</div>
+                        <ul class="check-list">
+                            <li>Letters, digits, underscores, or $ symbols</li>
+                            <li>Cannot start with a digit</li>
+                            <li>Cannot use reserved words (let, function, while, etc.)</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <div class="section-header accent">Camel Casing Convention</div>
+                        <p>Start with lowercase, capitalize subsequent words</p>
+                        <div class="example-box correct">✓ lastPrice</div>
+                        <div class="example-box incorrect">✗ LastPrice</div>
+                        <div class="example-box incorrect">✗ last_price</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Constants -->
+        <div class="slide" id="slide-6">
+            <div class="slide-content">
+                <h1 class="slide-title">Constants</h1>
+                <div class="definition-box">
+                    <strong>Constant:</strong> An initialized variable whose value cannot change
+                </div>
+                <div class="two-column">
+                    <div class="column">
+                        <div class="section-header accent">Declaration Syntax</div>
+                        <p>Use the <code>const</code> keyword</p>
+                        <div class="code-block">const slicesPerPizza = 8;</div>
+                    </div>
+                    <div class="column">
+                        <div class="section-header primary">Key Characteristics</div>
+                        <ul class="bullet-list">
+                            <li>Must be initialized when declared</li>
+                            <li>Value cannot be reassigned</li>
+                            <li>Use for values that won't change</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Dynamic Typing -->
+        <div class="slide" id="slide-7">
+            <div class="slide-content">
+                <h1 class="slide-title">Data Types: Dynamic Typing</h1>
+                <div class="definition-box">
+                    JavaScript uses <strong>dynamic typing</strong> - variable types are determined at run-time
+                </div>
+                <div class="two-column">
+                    <div class="column">
+                        <h3>What This Means</h3>
+                        <ul class="bullet-list">
+                            <li>Variables are not assigned a specific type when declared</li>
+                            <li>Type is determined by the value assigned</li>
+                            <li>Variables can be reassigned to different types</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3>Example</h3>
+                        <div class="code-block">
+                            let x = 5;<span class="comment"> // number</span><br>
+                            x = "test";<span class="comment"> // string</span>
+                        </div>
+                        <p class="small-text">The variable x started as a number, then was reassigned to a string - this is valid in JavaScript!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Common Data Types -->
+        <div class="slide" id="slide-8">
+            <div class="slide-content">
+                <h1 class="slide-title">Common JavaScript Data Types</h1>
+                <div class="data-types-grid">
+                    <div class="data-type-row">
+                        <div class="data-type-badge primary">string</div>
+                        <div class="data-type-info">
+                            <p>Group of characters in quotes</p>
+                            <code>let name = "Naya";</code>
+                        </div>
+                    </div>
+                    <div class="data-type-row">
+                        <div class="data-type-badge accent">number</div>
+                        <div class="data-type-info">
+                            <p>Numbers with or without decimals</p>
+                            <code>let score = 950;</code>
+                        </div>
+                    </div>
+                    <div class="data-type-row">
+                        <div class="data-type-badge secondary">boolean</div>
+                        <div class="data-type-info">
+                            <p>True or false values</p>
+                            <code>let hungry = true;</code>
+                        </div>
+                    </div>
+                    <div class="data-type-row">
+                        <div class="data-type-badge primary">array</div>
+                        <div class="data-type-info">
+                            <p>List of items in brackets</p>
+                            <code>let teams = ["Broncos", "Cowboys"];</code>
+                        </div>
+                    </div>
+                    <div class="data-type-row">
+                        <div class="data-type-badge accent">object</div>
+                        <div class="data-type-info">
+                            <p>Collection of property-value pairs</p>
+                            <code>let movie = {title:"Sing", rating:"PG"};</code>
+                        </div>
+                    </div>
+                    <div class="data-type-row">
+                        <div class="data-type-badge secondary">undefined</div>
+                        <div class="data-type-info">
+                            <p>Variable not assigned a value</p>
+                            <code>let message;</code>
+                        </div>
+                    </div>
+                    <div class="data-type-row">
+                        <div class="data-type-badge primary">null</div>
+                        <div class="data-type-info">
+                            <p>Intentionally absent value</p>
+                            <code>let book = null;</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Comments & Semicolons -->
+        <div class="slide" id="slide-9">
+            <div class="slide-content">
+                <h1 class="slide-title">Comments & Semicolons</h1>
+                <div class="two-column">
+                    <div class="column">
+                        <div class="section-header primary">Comments</div>
+                        <p>Text for humans that JavaScript ignores</p>
+                        <div class="example-section">
+                            <h4>Single-line comment</h4>
+                            <div class="code-block">// This is a comment</div>
+                        </div>
+                        <div class="example-section">
+                            <h4>Multi-line comment</h4>
+                            <div class="code-block">/* This is a<br>   multi-line<br>   comment */</div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="section-header accent">Semicolons</div>
+                        <p>JavaScript does not require semicolons at the end of statements</p>
+                        <ul class="bullet-list">
+                            <li>Only required when two statements are on the same line</li>
+                            <li>Good practice: avoid multiple statements per line</li>
+                            <li>Be consistent: use them or don't throughout your code</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Input & Output -->
+        <div class="slide" id="slide-10">
+            <div class="slide-content">
+                <h1 class="slide-title">Input & Output in JavaScript</h1>
+                <div class="two-column">
+                    <div class="column">
+                        <div class="section-header primary">Getting Input</div>
+                        <h4>prompt() function</h4>
+                        <p>Displays a dialog box for user to enter text</p>
+                        <div class="code-block">let userName = prompt("Enter your name:");</div>
+                        <ul class="small-bullet-list">
+                            <li>Returns the text the user typed</li>
+                            <li>Returns null if user presses Cancel</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <div class="section-header accent">Producing Output</div>
+                        <h4>console.log() function</h4>
+                        <p>Displays text or numbers in the console</p>
+                        <div class="code-block">console.log("Hello, World!");</div>
+                        <div class="info-box-small">
+                            <strong>The Console:</strong> A location where text output is displayed. Accessible through browser development tools (F12)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 11: Key Takeaways -->
+        <div class="slide" id="slide-11">
+            <div class="slide-content">
+                <h1 class="slide-title">Key Takeaways</h1>
+                <div class="takeaways-list">
+                    <div class="takeaway-item">
+                        <div class="takeaway-number primary">1</div>
+                        <p>JavaScript is one of the most popular programming languages, powering modern web applications</p>
+                    </div>
+                    <div class="takeaway-item">
+                        <div class="takeaway-number accent">2</div>
+                        <p>Variables store values in memory and can be declared with <code>let</code> or <code>const</code></p>
+                    </div>
+                    <div class="takeaway-item">
+                        <div class="takeaway-number secondary">3</div>
+                        <p>Use camelCasing for identifiers and follow naming rules (no starting digits, no reserved words)</p>
+                    </div>
+                    <div class="takeaway-item">
+                        <div class="takeaway-number primary">4</div>
+                        <p>JavaScript uses dynamic typing - variables can hold different data types (string, number, boolean, array, object, etc.)</p>
+                    </div>
+                    <div class="takeaway-item">
+                        <div class="takeaway-number accent">5</div>
+                        <p>Use <code>prompt()</code> for input and <code>console.log()</code> for output</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Controls -->
+    <div class="navigation">
+        <button id="prevBtn" class="nav-btn" aria-label="Previous slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        <div class="slide-counter">
+            <span id="currentSlide">1</span> / <span id="totalSlides">11</span>
+        </div>
+        <button id="nextBtn" class="nav-btn" aria-label="Next slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Keyboard Shortcuts Info -->
+    <div class="shortcuts-info">
+        Use ← → arrow keys or click buttons to navigate
+    </div>
+
+    <script src="presentation-script.js"></script>
+</body>
+</html>
